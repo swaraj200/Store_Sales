@@ -52,19 +52,18 @@ Modelling: splitting the data in 80 : 20 ratio as train and test.For scaling Min
 Divided Train data set into X_train and y_train.
  Ran RFE for the feature seclection out of 25 best 15 features where selected.
  by using the OLS model R anda adj R values is obtained. then the manual feature elimination is done the minimize the p value of the features and VIF score. 
- After recrussive elimination of the features , final 6 features are obtained with R value of 56 and adjusted value of 55 
+ After recrussive elimination of the features , final 6 features are obtained with R-valuee of 56.7 and an  adjusted value of 55 
 
-After the completing the modelling on the train data set. Modelling on the test data set is done 
-The columns are dropped in the test data set to macth with the train data set and then the dataset is transformed according to the train data set. after running the OLS model , we get the R2_score of 54 which is close to the R2_score of the train data set which implies that the model on the test data set is performing as per the train data set.
+After completing the modelling on the train data set. Modelling on the test data set is done 
+The columns are dropped in the test data set to match with the train data set and then the dataset is transformed according to the train data set. After running the OLS model, we get the R2_score of 54 which is close to the R2_score of the train data set which implies that the model on the test data set is performing as per the train data set.
  
  
- Following are the columns which contribute to the Sales .
- 'Item_MRP', 'Outlet_Size_1', 'Outlet_Location_Type_1','Outlet_Type_0', 'Outlet_Type_1', 'Outlet_Type_3'
+ Following are the columns which contribute to the Sal.
+ Item_MRP', 'Item_Fat_Content_1', 'Outlet_Type_0', 'Outlet_Type_1', 'Outlet_Type_3'
 
 
-By the following analysis and the linearRegression plotting we can predict the sales varibale with
-the following equation ### sales=3665.06 × Item_MRP + 88.04 × Outlet_Size_1 + 74.47 ×
-Outlet_Location_Type_1 - 1531.97 × Outlet_Type_0 + 359.37 Outlet_Type_1 + 1697.05 ×
-Outlet_Type_3
+By the following analysis and the linearRegression plotting we can predict the sales variable with
+the following equation 
+Outlet_Sales=977.55 × Item_MRP + 83.68 × Item_Fat_Content_2 - 1615.65 × Outlet_Type_0 + 349.93 Outlet_Type_1 + 1737.29 × Outlet_Type_3
 
  
